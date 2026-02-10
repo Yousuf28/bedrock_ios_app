@@ -1,42 +1,46 @@
 # Privacy Policy for Bedrock Phone
 
-**Last Updated:** January 21, 2026
+**Last Updated:** February 9, 2026
 
-**Bedrock Phone** ("the App") is designed with privacy as its core principle. This Privacy Policy explains how your data is handled.
+**Bedrock Phone** ("the App") is designed with privacy as its core principle. This Privacy Policy explains how your data is handled, specifically regarding interactions with third-party AI services.
 
-## 1. No Data Collection by the Developer
+## 1. Data Collection and Usage
 
-The developer of Bedrock Phone **does not collect, store, share, or sell any of your personal data**. 
-- We have no servers.
-- We have no analytics trackers.
-- We cannot access your chat history.
-- We cannot see your AWS credentials.
+While the developer of Bedrock Phone does not maintain private servers to store your data, the App **does collect and transmit** user-generated content to a third-party service provider to function.
 
-## 2. Your Data Stays on Your Device
+### 1.1 Third-Party AI Service (AWS Bedrock)
 
-*   **Chat History**: All conversations are stored locally on your device in the App's Documents directory.
-*   **AWS Credentials**: Your Access Key ID and Secret Access Key are stored securely in the **iOS Keychain**, which is encrypted and isolated from other apps.
-
-## 3. Interaction with Third-Party AI Service (AWS Bedrock)
-
-To provide AI-generated responses, the App transmits the following data to a third-party service provider, **Amazon Web Services (AWS)**, specifically the **AWS Bedrock** service:
+To provide AI-generated responses, the App transmits the following data to **Amazon Web Services (AWS)**, specifically the **AWS Bedrock** service:
 
 *   **Text Prompts**: The messages you type.
-*   **Media**: Images or documents you attach to your messages.
+*   **Media**: Images (and potential future file attachments) you add to your messages.
 
-### 3.1 Data Sharing & Processing
-When you send a message:
-1.  Your data is sent securely (over SSL/TLS) directly from your device to AWS Bedrock API endpoints (e.g., `bedrock-runtime.us-east-1.amazonaws.com`).
-2.  **Consent**: You must explicitly consent to this data sharing within the App before using these features.
-3.  **Processing**: AWS processes this data to generate the text response.
-4.  **Retention & Training**: According to the [AWS Data Privacy FAQ](https://aws.amazon.com/compliance/data-privacy-faq/) and [AWS Bedrock](https://aws.amazon.com/bedrock/security-compliance/), AWS generally does not use content processed by Bedrock to train their base models. However, this is governed by AWS's terms and privacy policies.
+This transmission occurs directly from your device to AWS API endpoints (e.g., `bedrock-runtime.us-east-1.amazonaws.com`).
 
-By using the App, you agree to this data transmission to AWS.
+## 2. Data Sharing & Third-Party Disclosure
 
-## 4. Voice Data (Apple)
+In compliance with App Store Guidelines 5.1.1 and 5.1.2:
 
-If you use the voice dictation feature, the App uses Apple's **SFSpeechRecognizer**. Audio data is sent to Apple for processing to convert speech to text. This is governed by [Apple’s Privacy Policy](https://www.apple.com/legal/privacy/). You can disable this permission in your iOS Settings at any time.
+*   **Who receives the data?**: Amazon Web Services, Inc. (AWS).
+*   **What data?**: Text prompts and image attachments.
+*   **Purpose**: To process your input and generate an AI response.
+*   **Protection**: Your AWS Credentials (Access Keys) are crucial for this interaction. They are stored securely on your device's **iOS Keychain** and are only used to sign requests to AWS.
 
-## 5. Contact
+### 2.1 Data Retention (AWS)
 
-If you have questions about this policy, please contact the developer.
+Data processed by AWS Bedrock is governed by the 
+- [AWS Service Terms](https://aws.amazon.com/service-terms/)
+- [Data Privacy Policies](https://aws.amazon.com/compliance/data-privacy-faq/).
+- [AWS Bedrock](https://aws.amazon.com/bedrock/security-compliance/)
+
+*   **Training**: According to AWS, they generally do not use content processed by Bedrock to improve their base models, but you should verify this against your specific AWS account settings and agreement.
+
+## 3. User Consent and Revocation
+
+*   **Consent**: Before using the AI features, you are presented with a disclosure screen where you must explicitly agree to this data transmission.
+*   **Revocation**: You may withdraw your consent at any time within the App's **Settings**. Revoking consent will disable AI features until you agree again.
+*   **Voice Data**: If you use voice features, audio is processed by Apple's on-device Speech Recognition or sent to Apple servers depending on your device settings, governed by [Apple’s Privacy Policy](https://www.apple.com/legal/privacy/).
+
+## 4. Contact
+
+If you have questions about this policy or data handling, please contact the developer.
